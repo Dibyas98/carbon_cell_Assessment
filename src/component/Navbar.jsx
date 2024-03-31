@@ -26,16 +26,16 @@ export default function Navbar() {
     <div className="navbar">
       <div className="navbar_logo_section">
         <h3>LOGO</h3>
-        <Menu></Menu>
+        <Menu className="burgur"></Menu>
       </div>
       <div className="navbar_input_section">
-        <Input type={"text"}></Input>
+        <Input type={"text"} class={"search"}></Input>
       </div>
-      <div>
-        <ul cla>
+      <div className="navbar_menu_section">
+        <ul className="navbar_menu_ul">
             {
                 menu.map((ele) =>{
-                    return <Menu_Button icon={ele.icon} menu={ele.name} class={'navbar_menu_list'}></Menu_Button>
+                    return <li><Menu_Button icon={ele.icon} menu={ele.name} class={'navbar_menu_list'}></Menu_Button></li>
                 })
             }
         </ul>

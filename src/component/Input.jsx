@@ -3,7 +3,7 @@ import React from 'react'
 export default function Input(props) {
   return (
     <div className={`${props.class}`}>
-      <input type={props.type} value={props.value}/>
+      <input type={props.type} value={props.value} className='search_input'/>
     </div>
   )
 }
