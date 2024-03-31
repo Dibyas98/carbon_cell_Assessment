@@ -13,3 +13,21 @@
     display: flex;
     justify-content: space-between;
 }
+.navbar_menu_section{
+
+}
+.navbar_menu_list{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+}
+.navbar_menu_list_icon{
+    color: white;
+}
+
+@media screen and (max-width:640px){
+    .navbar_input_section{
+        display: none;
+    }
+}
