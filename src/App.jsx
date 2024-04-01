@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Navbar from "./component/Navbar";
+import RightMain from "./component/RightMain";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -9,6 +10,7 @@ function App() {
     <>
       <section className="screen">
         <Navbar></Navbar>
+        <RightMain></RightMain>
       </section>
     </>
   );

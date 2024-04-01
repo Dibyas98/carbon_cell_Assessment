@@ -5,6 +5,7 @@ import { Building2 } from 'lucide-react';
 import { Box } from 'lucide-react';
 import Input from "./Input";
 import Menu_Button from "./Menu_Button";
+import { nanoid } from "nanoid";
 
 const menu =[
     {
@@ -35,7 +36,7 @@ export default function Navbar() {
         <ul className="navbar_menu_ul">
             {
                 menu.map((ele) =>{
-                    return <li><Menu_Button icon={ele.icon} menu={ele.name} class={'navbar_menu_list'}></Menu_Button></li>
+                    return <li key={nanoid()}><Menu_Button icon={ele.icon} menu={ele.name} class={'navbar_menu_list'}></Menu_Button></li>
                 })
             }
         </ul>
