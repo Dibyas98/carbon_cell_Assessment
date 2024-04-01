@@ -1,8 +1,11 @@
 .screen{
     width: 100%;
-    background-color: #0B0B0B;
-    height: 100vh;
+    /* background-color: #0B0B0B; */
+    /* background-color: aqua; */
+    height: 100%;
     display: flex;
+    overflow-x: hidden;
+    position: relative;
 
 }
 
@@ -12,11 +15,15 @@
     background-color: #1A1E1C;
     padding: 1rem 1rem;
     border-radius: 0 7px 7px 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
 }
 .navbar_logo_section{
     display: flex;
     justify-content: space-between;
 }
+
 .navbar_logo_section h3{    
     font-size: 1rem;
 }
@@ -39,6 +46,22 @@
     outline: none;
     padding: 0 0 0 10px;
 }
+.menu_mobile{
+    display: none;
+    width: 60%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.54);
+    /* filter: blur(8px); */
+    backdrop-filter: blur(8px);
+    position: fixed;
+    right: 0;
+    top: 45px;
+    z-index: 1;
+    padding: 1rem;
+    justify-content: center;
+    font-size: 1.5rem;
+    border-radius: 8px;
+}
 .navbar_menu_ul{
     display: flex;
     flex-direction: column;
@@ -54,8 +77,10 @@
 .navbar_menu_ul li{
     list-style: none;
 }
+.navbar_menu_list:hover{
+    color: #1B9A59;
+}
 .navbar_menu_list_icon{
-    color: white;
     width: 1rem;
 }
 .navbar_menu_list span{
@@ -65,17 +90,55 @@
     white-space: nowrap;
 }
 .rightmain{
+    position: relative;
+    left: calc(15%);
     width: calc(100% - 15%);
     height: 100%;
     overflow: hidden;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 1rem; */
+    padding-top: 0.5rem;
+}
+.chart_section{
+    width: calc(100%);
+    padding-left: 10rem;
 }
 .chart{
-
-    width: 80%;
-    height: 80%;
-    /* background-color: blue; */
+    padding-top: 1rem;
+    width: 70%;
+    /* height: 70%; */
+}
+.crypto{
+    width: 100%;
+    padding: 0.5rem 1rem;
+}
+.crypto_section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+}
+.crypto_section_heading{
+    padding-left: 10rem;
+}
+.currency_Card_Section{
+    display: flex;
+    padding: 1rem;
+    width: 100%;
+    justify-content: center;
+    gap: 1rem;
+}
+.currencyCard{
+    
+    width: 22%;
+   
+    height: 120px;
+    background-color: #171717;
+    padding: 1rem;
+    border-radius: 5px;
 }
 
 @media screen and (max-width:426px){
@@ -85,8 +148,11 @@
     .navbar{
         width: 100%;
         height: fit-content;
-        padding: 5px 5px;
+        padding: 10px 8px;
         border-radius: 0;
+    }
+    .menu_mobile{
+        display: flex;
     }
     
     .navbar_input_section{
@@ -96,20 +162,37 @@
         display: none;
     }
     .rightmain{
+        left: 0;
         width: 100%;
-        padding: 1rem;
+        padding: 3rem 1rem;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
     .chart{
+
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items : center;
         width: 100%;
+    }
+    .crypto_section_heading{
+        padding-left: 0;
+    }
+    .currency_Card_Section{
+        flex-direction: column;
+        align-items: center;
+    }
+    .currencyCard{
+        width: 80%;
     }
 }
 
 @media screen and (min-width:426px) and (max-width:557px){
+    .screen{
+        overflow-x: hidden;
+        /* background-color: aqua; */
+    }
     .navbar{
         width: fit-content;
     }
@@ -131,7 +214,35 @@
     .navbar_logo_section .burgur{
         display: none;
     }
+    .crypto_section_heading{
+        padding-left: 1rem;
+    }
+    .currency_Card_Section{
+        flex-direction: column;
+        align-items: center;
+    }
+    .currencyCard{
+        width: 80%;
+    }
     
-    
+}
+@media screen and (min-width:557px) and (max-width:834px) {
+    .currencyCard{
+        width: 40%;
+        height: 180px;
+    }
+}
+@media screen and (min-width:557px) and (max-width:1190px) {
+    .crypto_section_heading{
+        padding-left: 2rem;
+    }
+    .currency_Card_Section{
+        /* flex-direction: column; */
+        align-items: center;
+    }
+    .currencyCard{
+        width: 40%;
+        /* height: 150px; */
+    }
 }
 

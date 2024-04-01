@@ -2,14 +2,19 @@ import { useState } from "react";
 import "./App.css";
 import Navbar from "./component/Navbar";
 import RightMain from "./component/RightMain";
+import Menu_Mobile from "./component/Menu_Mobile";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [Showmenu, setShowMenu] = useState(false);
+  const toggleShowMenu = ()=>{
+    setShowMenu(!Showmenu)
+  }
 
   return (
     <>
       <section className="screen">
-        <Navbar></Navbar>
+        <Navbar show={toggleShowMenu}></Navbar>
+        {Showmenu ? <Menu_Mobile></Menu_Mobile> : <></>}
         <RightMain></RightMain>
       </section>
     </>

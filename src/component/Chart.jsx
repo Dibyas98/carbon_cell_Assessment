@@ -45,6 +45,10 @@ export default function Chart({population}) {
        },
        grid: {
         color:"#3C3C3C"
+       },
+       title:{
+        display: true,
+        text:'population'
        }
       },
       x:{
@@ -53,7 +57,11 @@ export default function Chart({population}) {
         },
         grid: {
           color:"#3C3C3C"
-        }
+        },
+        title:{
+          display: true,
+          text:'Year'
+         }
       }
     },
     colors:{
@@ -63,6 +71,7 @@ export default function Chart({population}) {
 
   return (
     <div className="chart">
+      
       <Line options={options} data={data} />
     </div>
   );
