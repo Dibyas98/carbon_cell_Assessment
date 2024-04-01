@@ -103,12 +103,29 @@
 }
 .chart_section{
     width: calc(100%);
-    padding-left: 10rem;
+    padding: 1rem ;
+
+
+}
+.wallet_handel{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 .chart{
-    padding-top: 1rem;
-    width: 70%;
+    /* padding-top: 1rem; */
+    width: 60%;
     /* height: 70%; */
+}
+.wallet{
+    width: 30%;
+    height: fit-content;
+    background-color: #171717;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 5px;
 }
 .crypto{
     width: 100%;
@@ -138,6 +155,17 @@
     height: 120px;
     background-color: #171717;
     padding: 1rem;
+    border-radius: 5px;
+}
+.wallet_heading{
+    padding: 1rem 0;
+}
+.wallet_btn{
+    width: 50%;
+    height: 50px;
+    background-color: #2AB42A;
+    color: white;
+    border: none;
     border-radius: 5px;
 }
 
@@ -175,6 +203,15 @@
         flex-direction: column;
         align-items : center;
         width: 100%;
+        height: 50%;
+    }
+    .wallet_handel{
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .wallet{
+        width: 60%;
     }
     .crypto_section_heading{
         padding-left: 0;
@@ -214,6 +251,14 @@
     .navbar_logo_section .burgur{
         display: none;
     }
+    .wallet_handel{
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .wallet{
+        width: 60%;
+    } 
     .crypto_section_heading{
         padding-left: 1rem;
     }
@@ -230,6 +275,12 @@
     .currencyCard{
         width: 40%;
         height: 180px;
+    }
+    .navbar_menu_list span{
+        display: none;
+    }
+    .navbar_menu_list_icon{
+        width: 3rem;
     }
 }
 @media screen and (min-width:557px) and (max-width:1190px) {

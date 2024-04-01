@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Chart from "./Chart";
 import CryptoCurrency from "./CryptoCurrency";
+import Wallet from "./Wallet";
 
 export default function RightMain() {
   const [population, setPopulation] = useState([]);
@@ -20,13 +21,22 @@ export default function RightMain() {
   }, []);
   return (
     <div className="rightmain">
-      <div className="chart_section crypto_section_heading">
-      <h1>Line Graph of <span style={{color:'#2AB52A'}}>Population</span></h1>
-      <br />
-      {population.length > 0 ? <Chart population={population}></Chart> : <></>}
+      <div className="chart_section ">
+        <h1 className="crypto_section_heading">
+          Line Graph of <span style={{ color: "#2AB52A" }}>Population</span>
+        </h1>
+        <br />
+        <div className="wallet_handel">
+          {population.length > 0 ? (
+            <Chart population={population}></Chart>
+          ) : (
+            <></>
+          )}
+          <Wallet></Wallet>
+        </div>
       </div>
       <div className="crypto">
-      <CryptoCurrency></CryptoCurrency>
+        <CryptoCurrency></CryptoCurrency>
       </div>
     </div>
   );

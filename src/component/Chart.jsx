@@ -12,6 +12,7 @@ import {
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 
+
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -36,7 +37,12 @@ export default function Chart({population}) {
   }
    const options ={
     Plugins: {
-      legend : true
+      legend : {
+        labels:{
+          boxWidth:40,
+          boxHeight:20
+        }
+      }
     },
     scales: {
       y: {
@@ -72,7 +78,7 @@ export default function Chart({population}) {
   return (
     <div className="chart">
       
-      <Line options={options} data={data} />
+      <Line options={options} data={data} style={{backgroundColor:'#171717',borderRadius:'5px'}}/>
     </div>
   );
 }
