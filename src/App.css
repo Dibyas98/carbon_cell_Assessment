@@ -222,6 +222,7 @@
     }
     .currencyCard{
         width: 80%;
+        height: fit-content;
     }
 }
 
@@ -282,6 +283,9 @@
     .navbar_menu_list_icon{
         width: 3rem;
     }
+    .currencyCard{
+        width: 80%;
+    }
 }
 @media screen and (min-width:557px) and (max-width:1190px) {
     .crypto_section_heading{
@@ -293,7 +297,7 @@
     }
     .currencyCard{
         width: 40%;
-        /* height: 150px; */
+        
     }
 }
 
