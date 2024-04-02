@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import Chart from "./Chart";
 import CryptoCurrency from "./CryptoCurrency";
 import Wallet from "./Wallet";
+import BarGraph from "./BarGraph";
+import { CandlestickChart } from 'lucide-react';
 
 export default function RightMain() {
   const [population, setPopulation] = useState([]);
@@ -21,18 +23,23 @@ export default function RightMain() {
   }, []);
   return (
     <div className="rightmain">
+      <div className="right_heading">
+         <h2>Hello, <span style={{ color: "#2AB52A" }}>Brooklyn Simmons</span> <CandlestickChart style={{color:'red'}}></CandlestickChart></h2>
+         <h4>Welcom to <span style={{ color: "#2AB52A" }}>Carbon Cell</span></h4>
+      </div>
       <div className="chart_section ">
-        <h1 className="crypto_section_heading">
-          Line Graph of <span style={{ color: "#2AB52A" }}>Population</span>
-        </h1>
-        <br />
         <div className="wallet_handel">
           {population.length > 0 ? (
             <Chart population={population}></Chart>
           ) : (
             <></>
           )}
-          <Wallet></Wallet>
+          {population.length > 0 ? (
+            <BarGraph population={population}></BarGraph>
+          ) : (
+            <></>
+            )}
+            <Wallet></Wallet>
         </div>
       </div>
       <div className="crypto">

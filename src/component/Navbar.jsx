@@ -7,6 +7,11 @@ import Input from "./Input";
 import Menu_Button from "./Menu_Button";
 import { nanoid } from "nanoid";
 import Menu_Mobile from "./Menu_Mobile";
+import logo from "../assets/logo.png"
+import { Hourglass } from 'lucide-react';
+import { ArrowDownUp } from 'lucide-react';
+import Navbar_Footer from "./Navbar_Footer";
+import Profile from "./Profile";
 
 const menu = [
   {
@@ -23,7 +28,18 @@ const menu = [
     name: "Assets",
     icon: Box,
     active:false
+    
   },
+  {
+    name:"Trade",
+    icon:ArrowDownUp,
+    active:false
+  },
+  {
+    name:"History",
+    icon:Hourglass,
+    active:false
+  }
 ];
 
 export default function Navbar({show}) {
@@ -32,13 +48,13 @@ export default function Navbar({show}) {
     <>
       <div className="navbar">
         <div className="navbar_logo_section">
-          <h3>LOGO</h3>
+          <img src={logo} alt="" className="logo"/>
           <Menu className="burgur" onClick={()=>show()}></Menu>
         </div>
         <div className="navbar_input_section">
           <Input type={"text"} class={"search"}></Input>
         </div>
-        <div className="navbar_menu_section">
+        <div className="navbar_menu_section navbar_mainmenu">
           <ul className="navbar_menu_ul">
             {menu.map((ele) => {
               return (
@@ -54,6 +70,10 @@ export default function Navbar({show}) {
               );
             })}
           </ul>
+        </div>
+        <Navbar_Footer class = {"navbar_menu_section"}></Navbar_Footer>
+        <div className="profile_Section">
+        <Profile></Profile>
         </div>
       </div>
     </>

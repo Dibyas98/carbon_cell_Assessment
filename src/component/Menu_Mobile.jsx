@@ -5,6 +5,8 @@ import { Home } from "lucide-react";
 import { Building2 } from "lucide-react";
 import { Box } from "lucide-react";
 import Menu_Button from './Menu_Button';
+import Navbar_Footer from './Navbar_Footer';
+import Profile from './Profile';
 
 const menu = [
     {
@@ -27,7 +29,7 @@ const menu = [
 export default function Menu_Mobile() {
   return (
     <div className='menu_mobile'>
-          <ul className="navbar_menu_ul">
+          <ul className="navbar_menu_ul navbar_mainmenu">
             {menu.map((ele) => {
               return (
                 <li key={nanoid()}>
@@ -41,6 +43,8 @@ export default function Menu_Mobile() {
               );
             })}
           </ul>
+          <Navbar_Footer class="navbar_menu_list"></Navbar_Footer>
+          <Profile></Profile>
     </div>
   )
 }

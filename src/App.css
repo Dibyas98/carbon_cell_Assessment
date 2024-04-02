@@ -20,20 +20,29 @@
     top: 0;
 }
 .navbar_logo_section{
+    /* width: 100%; */
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-.navbar_logo_section h3{    
-    font-size: 1rem;
-}
+
 .navbar_menu_section{
  display: flex;
  justify-content: center;
+ 
+}
+.navbar_mainmenu{
+    
+    height: 40%;
+}
+.logo{
+    width: 80%;
+    height: 50px;
 }
 .navbar_input_section{
-    padding: 2rem 0;
-    height: 100px;
+    padding: 0.5rem 0;
+    height: 50px;
 }
 .search{
     width: 100%;
@@ -55,10 +64,10 @@
     backdrop-filter: blur(8px);
     position: fixed;
     right: 0;
-    top: 45px;
+    top: 50px;
     z-index: 1;
     padding: 1rem;
-    justify-content: center;
+    /* justify-content: center; */
     font-size: 1.5rem;
     border-radius: 8px;
 }
@@ -101,6 +110,10 @@
     /* gap: 1rem; */
     padding-top: 0.5rem;
 }
+.right_heading{
+    padding: 0.5rem 1rem;
+    width: 100%;
+}
 .chart_section{
     width: calc(100%);
     padding: 1rem ;
@@ -114,11 +127,15 @@
 }
 .chart{
     /* padding-top: 1rem; */
-    width: 60%;
-    /* height: 70%; */
+    width: 40%;
+    height: 70%;
+}
+.barGraph{
+    width: 40%;
+    height: 70%;
 }
 .wallet{
-    width: 30%;
+    width: 15%;
     height: fit-content;
     background-color: #171717;
     display: flex;
@@ -126,6 +143,7 @@
     align-items: center;
     padding: 1rem;
     border-radius: 5px;
+    margin-top: 2rem;
 }
 .crypto{
     width: 100%;
@@ -152,10 +170,25 @@
     
     width: 22%;
    
-    height: 120px;
+    height: fit-content;
     background-color: #171717;
     padding: 1rem;
     border-radius: 5px;
+}
+.currency_head{
+    display: flex;
+    justify-content: space-between;
+}
+.currency_head div{
+    text-align: right;
+    font-size: 1.3rem;
+    
+    
+}
+.currency_head div p{
+    font-size: 0.6rem;
+    font-weight: 300;
+    color: rgba(181, 149, 149, 0.674);
 }
 .wallet_heading{
     padding: 1rem 0;
@@ -167,8 +200,43 @@
     color: white;
     border: none;
     border-radius: 5px;
+    font-size: 0.9rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
+.profile{
+    width: 100%;
+    border-radius: 5px;
+    padding: 1rem 0.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333333;
+    margin-top: 1rem;
 
+}
+.profile img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.profile h3{
+    font-size: 0.8rem;
+    text-align: center;
+}
+.profile div{
+    width: 100%;
+}
+.profile p{
+    font-size: 0.5rem;
+    width: 100px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+}
 @media screen and (max-width:426px){
     .screen{
         flex-direction: column;
@@ -181,6 +249,7 @@
     }
     .menu_mobile{
         display: flex;
+        flex-direction: column;
     }
     
     .navbar_input_section{
@@ -188,6 +257,10 @@
     }
     .navbar_menu_section{
         display: none;
+    }
+    .logo{
+        height: 30px;
+        width: 30%;
     }
     .rightmain{
         left: 0;
@@ -197,7 +270,7 @@
         flex-direction: column;
         align-items: center;
     }
-    .chart{
+    .chart, .barGraph{
 
         display: flex;
         flex-direction: column;
@@ -209,9 +282,11 @@
         flex-direction: column;
         align-items: center;
         gap: 1rem;
+        width: 100%;
+        flex-wrap: nowrap;
     }
     .wallet{
-        width: 60%;
+        width: 100%;
     }
     .crypto_section_heading{
         padding-left: 0;
@@ -223,6 +298,9 @@
     .currencyCard{
         width: 80%;
         height: fit-content;
+    }
+    .profile_Section{
+        display: none;
     }
 }
 
@@ -246,9 +324,6 @@
     .navbar_menu_section{
         justify-content: start;
     }
-    .navbar_logo_section{
-        height: 100px;
-    }
     .navbar_logo_section .burgur{
         display: none;
     }
@@ -270,21 +345,47 @@
     .currencyCard{
         width: 80%;
     }
+    .navbar_logo_section{
+        /* background-color: #2AB42A; */
+        padding: 0;
+    }
+    .logo{
+        /* rotate: -90deg; */
+        background-color: #2AB42A;
+        height: 25px;
+        width: 100%;
+    }
+    .profile{
+        width: 50px;
+        background-color: transparent;
+    }
+    .profile div{
+        display: none;
+    }
+    
     
 }
 @media screen and (min-width:557px) and (max-width:834px) {
     .currencyCard{
-        width: 40%;
-        height: 180px;
+        width: 80%;
+        height: fit-content;
     }
     .navbar_menu_list span{
         display: none;
     }
     .navbar_menu_list_icon{
-        width: 3rem;
+        width: 2rem;
     }
-    .currencyCard{
-        width: 80%;
+    .navbar_input_section{
+        height: 50px;
+        padding: 0;
+    }
+    .profile{
+        background-color: transparent;
+    }
+    .profile div{
+        display: none;
+
     }
 }
 @media screen and (min-width:557px) and (max-width:1190px) {
@@ -298,6 +399,9 @@
     .currencyCard{
         width: 40%;
         
+    }
+    .burgur{
+        display: none;
     }
 }
 

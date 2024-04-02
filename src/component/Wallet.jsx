@@ -26,7 +26,7 @@ export default function Wallet() {
         
         <div style={{width:'100%',textOverflow:'ellipsis',overflow:'hidden',whiteSpace:'nowrap'}}>
           <>
-          <h4>Account connected Successful</h4>
+          <h4>connect Successful</h4>
             {chainId && `Connected chain: ${chainId}`}
             <p style={{textOverflow:'ellipsis',overflow:'hidden',whiteSpace:'nowrap'}}></p>
             {account && `Connected account: ${account}`}
