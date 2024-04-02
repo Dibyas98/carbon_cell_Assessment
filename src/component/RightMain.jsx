@@ -24,8 +24,11 @@ export default function RightMain() {
   return (
     <div className="rightmain">
       <div className="right_heading">
+         <div>
          <h2>Hello, <span style={{ color: "#2AB52A" }}>Brooklyn Simmons</span> <CandlestickChart style={{color:'red'}}></CandlestickChart></h2>
          <h4>Welcom to <span style={{ color: "#2AB52A" }}>Carbon Cell</span></h4>
+         </div>
+         <Wallet></Wallet>
       </div>
       <div className="chart_section ">
         <div className="wallet_handel">
@@ -39,7 +42,7 @@ export default function RightMain() {
           ) : (
             <></>
             )}
-            <Wallet></Wallet>
+            
         </div>
       </div>
       <div className="crypto">

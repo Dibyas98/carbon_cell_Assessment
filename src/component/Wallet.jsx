@@ -17,19 +17,18 @@ export default function Wallet() {
   };
   return (
     <div className="wallet">
-      <h1 className="wallet_heading">Wallet</h1>
 { account?<Check style={{color:'green', backgroundColor:'wheat', borderRadius:'50%'}}></Check>:<button className="wallet_btn" onClick={connect}>
-        Connect
+        Connect Wallet
       </button>}
       
       {connected ?(
         
         <div style={{width:'100%',textOverflow:'ellipsis',overflow:'hidden',whiteSpace:'nowrap'}}>
           <>
-          <h4>connect Successful</h4>
-            {chainId && `Connected chain: ${chainId}`}
+          <h4 style={{textAlign:'center'}}>connect Successful</h4>
+            {/* {chainId && `Connected chain: ${chainId}`}
             <p style={{textOverflow:'ellipsis',overflow:'hidden',whiteSpace:'nowrap'}}></p>
-            {account && `Connected account: ${account}`}
+            {account && `Connected account: ${account}`} */}
           </>
         </div>
       ):<></>}

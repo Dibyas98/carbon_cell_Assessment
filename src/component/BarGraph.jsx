@@ -28,7 +28,7 @@ export default function BarGraph({population}) {
           data:population.map((ele) => ele.Population),
           backgroundColor:'yellow',
           borderColor:'#2AB42A',
-        //   pointBorderColor:'white'
+          // pointBorderColor:'white'
         }]
       }
        const options ={

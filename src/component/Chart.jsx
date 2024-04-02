@@ -80,7 +80,7 @@ export default function Chart({population}) {
       <h1 className="crypto_section_heading">
           Line Graph of <span style={{ color: "#2AB52A" }}>Population</span>
         </h1>
-      <Line options={options} data={data} style={{backgroundColor:'#171717',borderRadius:'5px'}}/>
+      <Line  options={options} data={data} style={{backgroundColor:'#171717',borderRadius:'5px'}}/>
     </div>
   );
 }
